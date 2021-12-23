@@ -1,2 +1,2 @@
 # blackjack-JS
-Jackblack game using JS
+Blackjack game using JS
