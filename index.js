@@ -83,7 +83,7 @@ function startGame() {
 function renderGame() {
     var tempCards = ""
     for (let i = 0; i < playerCards.length; i++) {
-        tempCards += '<li class="' + playerCards[i].naipe + '">' + '<p>'+ playerCards[i].string + '</p>' + '<i class="'+ playerCards[i].icone+'"></i>' + '</li>'
+        tempCards += '<li class="' + playerCards[i].naipe + '">' + '<div class="card_content top">' + '<p>'+ playerCards[i].string + '</p>' + '<i class="'+ playerCards[i].icone+'"></i>' + '</div>' + '<div class="card_content bottom">' + '<p>'+ playerCards[i].string + '</p>' + '<i class="'+ playerCards[i].icone+'"></i>' + '</div>' +'</li>'
     }
     playerCardsEl.innerHTML = tempCards
 

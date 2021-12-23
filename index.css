@@ -42,10 +42,34 @@ button {
     list-style: none;
 }
 #cards-el > li {
+    position: relative;
     width: 60px;
     height: 90px;
     background: #fff;
     border-radius: 3px;
+}
+
+.card_content {
+    height: min-content;
+    position: absolute;
+}
+
+.top {
+    left: 2px;
+    top: 2px
+}
+
+.bottom {
+    right: 2px;
+    bottom: 2px
+}
+
+.card_content > p {
+    margin: 0;
+}
+
+.card_content i {
+    font-size: 10px;
 }
 
 #cards-el > .C {
