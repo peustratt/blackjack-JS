@@ -39,6 +39,13 @@ button {
 #cards-el {
     display: flex;
     justify-content: space-around;
+    list-style: none;
+}
+#cards-el > li {
+    width: 60px;
+    height: 90px;
+    background: #fff;
+    border-radius: 3px;
 }
 
 #cards-el > .C {

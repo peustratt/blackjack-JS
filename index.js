@@ -22,11 +22,23 @@ function generateDeck() {
 
     for (var i=0; i < naipes.length; i++) {
         for (var j=0; j < numeros.length; j++) {
+            var icone = ""
+            if (naipes[i] == 'C'){
+                icone = "bi bi-heart-fill"
+            } else if (naipes[i] == 'O') {
+                icone = "bi bi-diamond-fill"
+            } else if (naipes[i] == 'E') {
+                icone = "bi bi-suit-spade-fill"
+            } else {
+                icone = "bi bi-tree-fill"
+            }
+
             deck.push(carta = {
                 naipe: naipes[i],
                 string: numeros[j],
                 value: numeros[j],
-                name: numeros[j] + naipes[i]
+                name: numeros[j] + naipes[i],
+                icone: icone
             })
         }
     }
@@ -71,7 +83,7 @@ function startGame() {
 function renderGame() {
     var tempCards = ""
     for (let i = 0; i < playerCards.length; i++) {
-        tempCards += '<li class="' + playerCards[i].naipe + '">' + playerCards[i].name + '</li>'
+        tempCards += '<li class="' + playerCards[i].naipe + '">' + '<p>'+ playerCards[i].string + '</p>' + '<i class="'+ playerCards[i].icone+'"></i>' + '</li>'
     }
     playerCardsEl.innerHTML = tempCards
 
