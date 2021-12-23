@@ -1,2 +1,2 @@
 # blackjack-JS
-Blackjack game using JS
+Blackjack game using vanilla JS and CSS.
