@@ -15,8 +15,13 @@ h1 {
     font-style: italic;
 }
 
-/* 3. Make sure that the two buttons have some space between
-each other when they are rendered out vertically */
+/* buttons */
+.btns-wrapper {
+    display: grid;
+    width: fit-content;
+    margin: 0 auto;
+}
+
 button {
     color: #016f32;
     width: 150px;
@@ -27,19 +32,25 @@ button {
     border: none;
     border-radius: 2px;
     margin: 2px 0;
+    transition: 100ms;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 /* cards styling*/
 
-.game-wrapper {
-    width: 300px;
-    margin: 0 auto;
-}
-
 #cards-el {
+    padding: 0;
     display: flex;
-    justify-content: space-around;
+    width: 400px;
+    justify-content: center;
+    gap: 2em;
     list-style: none;
+    margin: 0 auto;
+
+    
 }
 #cards-el > li {
     position: relative;
@@ -47,6 +58,11 @@ button {
     height: 90px;
     background: #fff;
     border-radius: 3px;
+    transition: 100ms;
+}
+
+#cards-el > li:hover {
+    transform: scale(1.1);
 }
 
 .card_content {
