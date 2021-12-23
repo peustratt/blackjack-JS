@@ -28,3 +28,29 @@ button {
     border-radius: 2px;
     margin: 2px 0;
 }
+
+/* cards styling*/
+
+.game-wrapper {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#cards-el {
+    display: flex;
+    justify-content: space-around;
+}
+
+#cards-el > .C {
+    color: red;
+}
+#cards-el > .O {
+    color: red;
+}
+#cards-el > .E {
+    color: black;
+}
+
+#cards-el > .P {
+    color: black;
+}

@@ -57,6 +57,7 @@ function getRandomCard() {
 }
 
 function startGame() {
+    playerCardsEl.innerHTML = ""
     deck = generateDeck()
     isAlive = true
     hasBlackJack = false
@@ -68,10 +69,12 @@ function startGame() {
 }
 
 function renderGame() {
-    playerCardsEl.textContent = "Cards: "
+    var tempCards = ""
     for (let i = 0; i < playerCards.length; i++) {
-        playerCardsEl.innerHTML += '<li class="' + playerCards[i].naipe + '">' + playerCards[i].name + '</li>'
+        tempCards += '<li class="' + playerCards[i].naipe + '">' + playerCards[i].name + '</li>'
     }
+    playerCardsEl.innerHTML = tempCards
+
 
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
