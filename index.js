@@ -24,6 +24,7 @@ function generateDeck() {
         for (var j=0; j < numeros.length; j++) {
             deck.push(carta = {
                 naipe: naipes[i],
+                string: numeros[j],
                 value: numeros[j],
                 name: numeros[j] + naipes[i]
             })
@@ -69,7 +70,7 @@ function startGame() {
 function renderGame() {
     playerCardsEl.textContent = "Cards: "
     for (let i = 0; i < playerCards.length; i++) {
-        playerCardsEl.textContent += playerCards[i].name + " "
+        playerCardsEl.innerHTML += '<li class="' + playerCards[i].naipe + '">' + playerCards[i].name + '</li>'
     }
 
     sumEl.textContent = "Sum: " + sum
@@ -84,6 +85,7 @@ function renderGame() {
     }
     messageEl.textContent = message
 }
+
 
 function newCard() {
     if (isAlive && !hasBlackJack) {
