@@ -18,7 +18,6 @@ playerEL.textContent = player.name + ": $" + player.chips
 function generateDeck() {
     var naipes = ['C', 'O', 'E', 'P']
     var numeros = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-
     var deck = []
 
     for (var i=0; i < naipes.length; i++) {
@@ -30,7 +29,18 @@ function generateDeck() {
             })
         }
     }
+
+    shuffleArray(deck)
     return deck
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
 
 function getRandomCard() {
@@ -40,6 +50,8 @@ function getRandomCard() {
     } else if (card.value === 'A') {
         card.value = 10
     }
+    card.value = parseInt(card.value)
+
     return card
 }
 
@@ -74,7 +86,6 @@ function renderGame() {
 }
 
 function newCard() {
-    console.log(hasBlackJack)
     if (isAlive && !hasBlackJack) {
         var card = getRandomCard()
         sum += card.value
