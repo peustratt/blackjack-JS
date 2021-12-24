@@ -15,15 +15,16 @@ let playerEL = document.getElementById("player-el")
 
 playerEL.textContent = player.name + ": $" + player.chips
 
+// gera um array de com 52 objetos do tipo carta
 function generateDeck() {
     var naipes = ['C', 'O', 'E', 'P']
     var numeros = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
     var deck = []
 
-    for (var i=0; i < naipes.length; i++) {
-        for (var j=0; j < numeros.length; j++) {
+    for (var i = 0; i < naipes.length; i++) {
+        for (var j = 0; j < numeros.length; j++) {
             var icone = ""
-            if (naipes[i] == 'C'){
+            if (naipes[i] == 'C') {
                 icone = "bi bi-heart-fill"
             } else if (naipes[i] == 'O') {
                 icone = "bi bi-diamond-fill"
@@ -83,7 +84,7 @@ function startGame() {
 function renderGame() {
     var tempCards = ""
     for (let i = 0; i < playerCards.length; i++) {
-        tempCards += '<li class="' + playerCards[i].naipe + '">' + '<div class="card_content top">' + '<p>'+ playerCards[i].string + '</p>' + '<i class="'+ playerCards[i].icone+'"></i>' + '</div>' + '<div class="card_content bottom">' + '<p>'+ playerCards[i].string + '</p>' + '<i class="'+ playerCards[i].icone+'"></i>' + '</div>' +'</li>'
+        tempCards += '<li class="' + playerCards[i].naipe + '">' + '<div class="card_content top">' + '<p>' + playerCards[i].string + '</p>' + '<i class="' + playerCards[i].icone + '"></i>' + '</div>' + '<div class="card_content bottom">' + '<p>' + playerCards[i].string + '</p>' + '<i class="' + playerCards[i].icone + '"></i>' + '</div>' + '</li>'
     }
     playerCardsEl.innerHTML = tempCards
 

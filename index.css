@@ -15,7 +15,9 @@ h1 {
     font-style: italic;
 }
 
+
 /* buttons */
+
 .btns-wrapper {
     display: grid;
     width: fit-content;
@@ -36,8 +38,9 @@ button {
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+
 
 /* cards styling*/
 
@@ -49,20 +52,21 @@ button:hover {
     gap: 2em;
     list-style: none;
     margin: 0 auto;
-
-    
 }
-#cards-el > li {
+
+#cards-el>li {
     position: relative;
     width: 60px;
     height: 90px;
     background: #fff;
     border-radius: 3px;
     transition: 100ms;
+    box-shadow: 0 4px 12px 0px rgba(0,0,0,.5);
 }
 
-#cards-el > li:hover {
-    transform: scale(1.1);
+#cards-el>li:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px 0px rgba(0,0,0,.5);
 }
 
 .card_content {
@@ -71,33 +75,35 @@ button:hover {
 }
 
 .top {
-    left: 2px;
-    top: 2px
+    left: 4px;
+    top: 4px
 }
 
 .bottom {
-    right: 2px;
-    bottom: 2px
+    right: 4px;
+    bottom: 4px
 }
 
-.card_content > p {
+.card_content>p {
     margin: 0;
 }
 
 .card_content i {
-    font-size: 10px;
+    font-size: 8px;
 }
 
-#cards-el > .C {
+#cards-el>.C {
     color: red;
 }
-#cards-el > .O {
+
+#cards-el>.O {
     color: red;
 }
-#cards-el > .E {
+
+#cards-el>.E {
     color: black;
 }
 
-#cards-el > .P {
+#cards-el>.P {
     color: black;
 }
