@@ -63,9 +63,9 @@ function getRandomCard() {
         card.value = 10
     } else if (card.value === 'A') {
         card.value = 10
+    } else {
+        card.value = parseInt(card.value)
     }
-    card.value = parseInt(card.value)
-
     return card
 }
 
