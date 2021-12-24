@@ -82,9 +82,18 @@ function startGame() {
 }
 
 function renderGame() {
-    var tempCards = ""
+    let tempCards = ""
     for (let i = 0; i < playerCards.length; i++) {
-        tempCards += '<li class="' + playerCards[i].naipe + '">' + '<div class="card_content top">' + '<p>' + playerCards[i].string + '</p>' + '<i class="' + playerCards[i].icone + '"></i>' + '</div>' + '<div class="card_content bottom">' + '<p>' + playerCards[i].string + '</p>' + '<i class="' + playerCards[i].icone + '"></i>' + '</div>' + '</li>'
+        tempCards += `<li class="${playerCards[i].naipe}">
+                        <div class="card_content top">
+                            <p>${playerCards[i].string}</p>
+                            <i class="${playerCards[i].icone}"></i>
+                        </div>
+                        <div class="card_content bottom">
+                            <p>${playerCards[i].string}</p>
+                            <i class="${playerCards[i].icone}"></i>
+                        </div>
+                    </li>`
     }
     playerCardsEl.innerHTML = tempCards
 
@@ -105,7 +114,7 @@ function renderGame() {
 
 function newCard() {
     if (isAlive && !hasBlackJack) {
-        var card = getRandomCard()
+        let card = getRandomCard()
         sum += card.value
         playerCards.push(card)
         renderGame()
