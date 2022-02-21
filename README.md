@@ -9,7 +9,7 @@
 <p>Cada objeto card contém:<br> <strong>cartas</strong> = {<br><strong>naipe</strong>: Copas<br><strong>string do valor</strong>: 'K'<br><strong>valor</strong>: 10<br><strong>nome</strong>: 'KC'<br><strong>icone</strong>: bi bi-heart-fill<br>}</p>
 
 <div>
-  <img src="./images/start.gif" alt="My Project GIF" width="500" height="400">
-  <img src="./images/ezgif.com-gif-maker.gif" alt="My Project GIF" width="500" height="400">
+  <img src="./images/start.gif" alt="My Project GIF" width="350" height="300">
+  <img src="./images/ezgif.com-gif-maker.gif" alt="My Project GIF" width="350" height="300">
  </div>
 
